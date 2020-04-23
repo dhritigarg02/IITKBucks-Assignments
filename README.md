@@ -9,4 +9,5 @@ The output shall be as shown -
 * Debug mode: off
 * Running on http://127.0.0.1:8787/ (Press CTRL+C to quit)
 
-This means the server has started. You can send a post request to it at http://127.0.0.1:8787/hash . 
+This means the server has started. 
+You can send a post request to it at http://127.0.0.1:8787/hash in json format - {"data" : "<your_string>" }
