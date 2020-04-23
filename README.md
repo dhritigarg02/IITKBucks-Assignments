@@ -1,6 +1,6 @@
 # IITKBucks
 
-The webserver.py contains code for a web server in flask framework. To start the server, git clone the repository(or download the .py file) and run the script in command prompt using the command - python webserver.py in the relevant directory. 
+The webserver.py contains code for a web server in flask framework. To start the server, git clone the repository (or download the .py file) and run the script in command prompt using the command - python webserver.py in the relevant directory. 
 The output shall be as shown - 
 * Serving Flask app "webserver" (lazy loading)
 * Environment: production
