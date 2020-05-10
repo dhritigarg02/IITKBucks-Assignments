@@ -9,14 +9,14 @@ uncryp_txt = input("Please enter unencrypted message: ")
 signature_file = input("Please enter signature: ")
 
 try:
-    message = open(uncryp_txt).read()
+    message = open(uncryp_txt, 'rb').read()
 except:
     message = uncryp_txt
 
 signature = open(signature_file, 'rb').read()
 
 pub_key = RSA.import_key(open(pub_key_path).read())
-h = SHA256.new(message.encode())
+h = SHA256.new(message)
 verifier = pss.new(pub_key)
 
 try:
