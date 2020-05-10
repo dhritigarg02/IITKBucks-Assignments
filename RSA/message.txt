@@ -1,0 +1,1 @@
+An encryption method is presented with the novel property that publicly revealing an encryption key does not thereby reveal the corresponding decryption key.
