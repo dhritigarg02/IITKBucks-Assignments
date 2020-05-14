@@ -27,21 +27,21 @@ class Tx:
 
     def __init__(self, nI, inputs, nO, outputs):
 
-        self.number_inputs = nI
+        self.num_inputs = nI
         self.inputs = inputs
-        self.number_outputs = nO
+        self.num_outputs = nO
         self.outputs = outputs
 
         self.input_bytes = inputs[0]._bytes_
         self.output_bytes = outputs[0]._bytes_
 
-        for i in range(1, self.number_inputs):
+        for i in range(1, self.num_inputs):
             self.input_bytes += inputs[i]._bytes_
 
-        for i in range(1, self.number_outputs):
+        for i in range(1, self.num_outputs):
             self.output_bytes += outputs[i]._bytes_
 
-        self._bytes_ = pack('I', self.number_inputs) + self.input_bytes + pack('I', self.number_outputs) + self.output_bytes
+        self._bytes_ = pack('I', self.num_inputs) + self.input_bytes + pack('I', self.num_outputs) + self.output_bytes
 
 
 
