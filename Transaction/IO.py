@@ -3,10 +3,10 @@
 from tx import *
 import hashlib
 
-number_inputs = int(input('Enter number of inputs: '))
+num_inputs = int(input('Enter number of inputs: '))
 inputs = []
 
-for i in range(number_inputs):
+for i in range(num_inputs):
 
     transID = input('Enter transaction ID: ')
     index = input('Enter index : ')
@@ -14,17 +14,17 @@ for i in range(number_inputs):
 
     inputs.append(Input(transID, index, signature))
 
-number_outputs = int(input('Enter number of outputs: '))
+num_outputs = int(input('Enter number of outputs: '))
 outputs = []
 
-for i in range(number_outputs):
+for i in range(num_outputs):
 
     amount = input('Enter amount: ')
     publickey = input('Enter path to the public key: ')
 
     outputs.append(Output(amount, publickey))
 
-transaction = Tx(number_inputs, inputs, number_outputs, outputs)
+transaction = Tx(num_inputs, inputs, num_outputs, outputs)
 
 tx_hash = hashlib.sha256(transaction._bytes_).hexdigest()
 
