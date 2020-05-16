@@ -51,6 +51,7 @@ for i in range(num_outputs):
     pubkey = wrapper.wrap(text = fh[curr_index:curr_index + len_pubkey].decode('utf-8'))
     print('\t\tPublic key: ', end = '')
     for line in pubkey: print(line)
+    curr_index += len_pubkey
     print('\n')
 
 
