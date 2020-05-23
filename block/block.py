@@ -15,7 +15,7 @@ class block:
 
     def mine(self, max_nonce):
 
-        block_header_inits = index.to_bytes(4, 'big') + self.parent_hash + self.data_hash + target.to_bytes(32, 'big')
+        block_header_inits = self.index.to_bytes(4, 'big') + self.parent_hash + self.data_hash + self.target.to_bytes(32, 'big')
 
         h = hashlib.sha256()
         h.update(block_header_inits)
