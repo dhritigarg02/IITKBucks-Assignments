@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 
 my_map = {}
-my_peers = []
+my_peers = ['http://127.0.0.1:2021/']
 
 @app.route('/')
 def basic():
