@@ -25,7 +25,7 @@ def __add__():
         my_map[key] = value
         for peer in my_peers:
             requests.post(peer + 'add', json = data)
-            print('\nsent {} : {} to {}\n'.format(data['key'], data['value'], peer))
+            print('\nsent {}:{} to {}\n'.format(data['key'], data['value'], peer))
         return 'Set {} : {} successfully!'.format(key, value)
     return 'Key already in map'
 
